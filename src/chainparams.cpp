@@ -79,8 +79,8 @@ public:
         consensus.BIP34Height = 0;
         consensus.BIP34Hash = uint256S("0x001327a51d20780e899f2e46723c131ed08b13907828ec2205c68ea3553c763e");
         consensus.powLimit = uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        consensus.nPowTargetTimespan = 14 * 24 * 12 * 60; // 2.8 days
-        consensus.nPowTargetSpacing = 2 * 60; // 2 minutes
+        consensus.nPowTargetTimespan = 60; // 1 minutes
+        consensus.nPowTargetSpacing = 60; // 1 minutes
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1916; // 95% of 2016
@@ -132,14 +132,8 @@ public:
         consensus.hashGenesisBlock = genesis.GetHash();
 
         vSeeds.push_back(CDNSSeedData("bkcgoal.com", "bkcgoal.com"));
-        vSeeds.push_back(CDNSSeedData("n1.bkcgoal.com", "n1.bkcgoal.com"));
-        vSeeds.push_back(CDNSSeedData("n2.bkcgoal.com", "n2.bkcgoal.com"));
-        vSeeds.push_back(CDNSSeedData("bkcone.com", "bkcone.com"));
-        vSeeds.push_back(CDNSSeedData("n1.bkcone.com", "n1.bkcone.com"));
-        vSeeds.push_back(CDNSSeedData("n2.bkcone.com", "n2.bkcone.com"));
-        vSeeds.push_back(CDNSSeedData("bkcstar.com", "bkcstar.com"));
-        vSeeds.push_back(CDNSSeedData("n1.bkcstar.com", "n1.bkcstar.com"));
-        vSeeds.push_back(CDNSSeedData("n2.bkcstar.com", "n2.bkcstar.com"));
+
+        vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
         // Ref: https://en.bitcoin.it/wiki/List_of_address_prefixes
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,25); //'B'
@@ -147,8 +141,6 @@ public:
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,128);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
-
-        vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
         fMiningRequiresPeers = false;
         fDefaultConsistencyChecks = false;
