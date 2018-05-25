@@ -236,19 +236,50 @@ crypto_libbitcoin_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_CONFIG_INCLUDES)
 crypto_libbitcoin_crypto_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 crypto_libbitcoin_crypto_a_CFLAGS = $(AM_CFLAGS) $(PIE_FLAGS)
 crypto_libbitcoin_crypto_a_SOURCES = \
-  crypto/common.h \
-  crypto/hmac_sha256.cpp \
-  crypto/hmac_sha256.h \
-  crypto/hmac_sha512.cpp \
-  crypto/hmac_sha512.h \
-  crypto/ripemd160.cpp \
-  crypto/ripemd160.h \
-  crypto/sha1.cpp \
-  crypto/sha1.h \
-  crypto/sha256.cpp \
-  crypto/sha256.h \
-  crypto/sha512.cpp \
-  crypto/sha512.h
+	crypto/common.h \
+	crypto/hmac_sha256.cpp \
+	crypto/hmac_sha256.h \
+	crypto/hmac_sha512.cpp \
+	crypto/hmac_sha512.h \
+	crypto/ripemd160.cpp \
+	crypto/ripemd160.h \
+	crypto/sha1.cpp \
+	crypto/sha1.h \
+	crypto/sha256.cpp \
+	crypto/sha256.h \
+	crypto/sha512.cpp \
+	crypto/sha512.h \
+	crypto/sph/sph_types.h \
+	crypto/sph/sph_cubehash.h \
+	crypto/sph/aes_helper.c \
+	crypto/sph/echo.c \
+	crypto/sph/cubehash.c \
+	crypto/sph/sph_echo.h \
+	crypto/scrypt/scrypt.h \
+	crypto/scrypt/scrypt-sse2.cpp \
+	crypto/scrypt/scrypt.cpp \
+	crypto/cryptonight/cryptonight.h \
+	crypto/cryptonight/libcryptonight.h \
+	crypto/cryptonight/crypto/oaes_lib.h \
+	crypto/cryptonight/crypto/aesb.c \
+	crypto/cryptonight/crypto/c_keccak.h \
+	crypto/cryptonight/crypto/c_blake256.c \
+	crypto/cryptonight/crypto/cryptonight_config.h \
+	crypto/cryptonight/crypto/hash.h \
+	crypto/cryptonight/crypto/c_blake256.h \
+	crypto/cryptonight/crypto/c_groestl.c \
+	crypto/cryptonight/crypto/c_jh.c \
+	crypto/cryptonight/crypto/oaes_lib.c \
+	crypto/cryptonight/crypto/c_skein.c \
+	crypto/cryptonight/crypto/c_groestl.h \
+	crypto/cryptonight/crypto/oaes_config.h \
+	crypto/cryptonight/crypto/c_keccak.c \
+	crypto/cryptonight/crypto/skein_port.h \
+	crypto/cryptonight/crypto/c_skein.h \
+	crypto/cryptonight/crypto/c_jh.h \
+	crypto/cryptonight/crypto/groestl_tables.h \
+	crypto/cryptonight/cryptonight.c
+
 
 # common: shared between bitcoind, and bitcoin-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
