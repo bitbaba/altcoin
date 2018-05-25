@@ -1,9 +1,9 @@
 altcoin Core integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/altcoin/altcoin.svg?branch=master)](https://travis-ci.org/altcoin/altcoin)
+[![Build Status](https://travis-ci.org/bitbaba/altcoin.svg?branch=master)](https://travis-ci.org/bitbaba/altcoin)
 
-https://altcoincore.org
+https://bitbaba.com
 
 What is altcoin?
 ----------------
